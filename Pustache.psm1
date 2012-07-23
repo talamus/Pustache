@@ -1,4 +1,9 @@
-[Reflection.Assembly]::LoadFile((Convert-Path ".\lib\Nustache.Core.dll"))
+function Get-ScriptDirectory {
+	$Invocation = (Get-Variable MyInvocation -Scope 1).Value
+	Split-Path $Invocation.MyCommand.Path
+}
+
+[Reflection.Assembly]::LoadFile((Join-Path (Get-ScriptDirectory) "\lib\Nustache.Core.dll"))
 function Invoke-Nustache($template, $data) {
     return [Nustache.Core.Render]::StringToString($template, (Get-Dictionary $data))
 }
@@ -10,3 +15,4 @@ function Get-Dictionary($data) {
     }
     return $dictionary
 }
+

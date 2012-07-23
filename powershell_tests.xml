@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="145" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2012-07-23" time="16:48:50">
+	<environment nunit-version="2.5.8.0" clr-version="2.0.50727.1433" os-version="6.1.7601" platform="Microsoft Windows 7 Ultimate |C:\Windows|\Device\Harddisk0\Partition1" cwd="C:\Users\Narendra Tumkur\Documents\GitHub\Pustache" machine-name="WIN-I2UL0NL7N68" user="Narendra Tumkur" user-domain="WIN-I2UL0NL7N68" /> <culture-info current-culture="en-US" current-uiculture="en-US" />
+	<test-suite type="Powershell" name="comments.yml" executed="True" result="Failure" success="False" time="0.1631197" asserts="0"> <results> 		<test-case name="Inline 
+  Comment blocks should be removed from the template." executed="True" result="Success" success="True" time="0.0289809" asserts="0" /> <test-case name="Multiline 
+  Multiline comments should be permitted." executed="True" result="Success" success="True" time="0.006402" asserts="0" /> <test-case name="Standalone 
+  All standalone comment lines should be removed." executed="True" result="Failure" success="False" time="0.0288161" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: Begin.
+End.
+. But was: Begin.
+
+End.
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Indented Standalone 
+  All standalone comment lines should be removed." executed="True" result="Failure" success="False" time="0.0140398" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: Begin.
+End.
+. But was: Begin.
+  
+End.
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Line Endings 
+  "\r\n" should be considered a newline for standalone tags." executed="True" result="Failure" success="False" time="0.0130007" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: |
+|. But was: |
+
+|"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Without Previous Line 
+  Standalone tags should not require a newline to precede them." executed="True" result="Failure" success="False" time="0.0155251" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: !. But was:   
+!"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Without Newline 
+  Standalone tags should not require a newline to follow them." executed="True" result="Failure" success="False" time="0.0138002" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: !
+. But was: !
+  "</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Multiline Standalone 
+  All standalone comment lines should be removed." executed="True" result="Failure" success="False" time="0.0138644" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: Begin.
+End.
+. But was: Begin.
+
+End.
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Indented Multiline Standalone 
+  All standalone comment lines should be removed." executed="True" result="Failure" success="False" time="0.0154099" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: Begin.
+End.
+. But was: Begin.
+  
+End.
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Indented Inline 
+  Inline comments should not strip whitespace" executed="True" result="Success" success="True" time="0.0072803" asserts="0" /> <test-case name="Surrounding Whitespace 
+  Comment removal should preserve surrounding whitespace." executed="True" result="Success" success="True" time="0.0060003" asserts="0" /> 	</results> </test-suite> <test-suite type="Powershell" name="delimiters.yml" executed="True" result="Failure" success="False" time="0.2078064" asserts="0"> <results> 		<test-case name="Pair Behavior 
+  The equals sign (used on both sides) should permit delimiter changes." executed="True" result="Failure" success="False" time="0.0301228" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: (Hey!). But was: (<%text%>)"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Special Characters 
+  Characters with special meaning regexen should be valid delimiters." executed="True" result="Failure" success="False" time="0.0120636" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: (It worked!). But was: ([text])"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Sections 
+  Delimiters set outside sections should persist." executed="True" result="Failure" success="False" time="0.025304" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: [
+  I got interpolated.
+  |data|
+
+  {{data}}
+  I got interpolated.
+]
+. But was: [
+
+  I got interpolated.
+  |data|
+
+
+
+|#section|
+  I got interpolated.
+  |data|
+|/section|
+]
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Inverted Sections 
+  Delimiters set outside inverted sections should persist." executed="True" result="Failure" success="False" time="0.0161658" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: [
+  I got interpolated.
+  |data|
+
+  {{data}}
+  I got interpolated.
+]
+. But was: [
+
+
+
+|^section|
+  I got interpolated.
+  |data|
+|/section|
+]
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Partial Inheritence 
+  Delimiters set in a parent template should not affect a partial." executed="True" result="Failure" success="False" time="0.0152706" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: [ .yes. ]
+[ .yes. ]
+. But was: [  ]
+
+[ |>include| ]
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Post-Partial Behavior 
+  Delimiters set in a partial should not affect the parent template." executed="True" result="Failure" success="False" time="0.0157654" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: [ .yes.  .yes. ]
+[ .yes.  .|value|. ]
+. But was: [  ]
+[ .yes.  .|value|. ]
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Surrounding Whitespace 
+  Surrounding whitespace should be left untouched." executed="True" result="Success" success="True" time="0.0077213" asserts="0" /> <test-case name="Outlying Whitespace (Inline) 
+  Whitespace should be left untouched." executed="True" result="Success" success="True" time="0.0076929" asserts="0" /> <test-case name="Standalone Tag 
+  Standalone lines should be removed from the template." executed="True" result="Failure" success="False" time="0.0165111" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: Begin.
+End.
+. But was: Begin.
+
+End.
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Indented Standalone Tag 
+  Indented standalone lines should be removed from the template." executed="True" result="Failure" success="False" time="0.0125756" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: Begin.
+End.
+. But was: Begin.
+  
+End.
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Line Endings 
+  "\r\n" should be considered a newline for standalone tags." executed="True" result="Failure" success="False" time="0.0136114" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: |
+|. But was: |
+
+|"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Without Previous Line 
+  Standalone tags should not require a newline to precede them." executed="True" result="Failure" success="False" time="0.0130007" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: =. But was:   
+="</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Without Newline 
+  Standalone tags should not require a newline to follow them." executed="True" result="Failure" success="False" time="0.0150008" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: =
+. But was: =
+  "</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Pair with Padding 
+  Superfluous in-tag whitespace should be ignored." executed="True" result="Success" success="True" time="0.0070004" asserts="0" /> 	</results> </test-suite> <test-suite type="Powershell" name="interpolation.yml" executed="True" result="Failure" success="False" time="0.3406514" asserts="0"> <results> 		<test-case name="No Interpolation 
+  Mustache-free templates should render as-is." executed="True" result="Success" success="True" time="0.0080004" asserts="0" /> <test-case name="Basic Interpolation 
+  Unadorned tags should interpolate content into the template." executed="True" result="Success" success="True" time="0.0075446" asserts="0" /> <test-case name="HTML Escaping 
+  Basic interpolation should be HTML escaped." executed="True" result="Success" success="True" time="0.0087991" asserts="0" /> <test-case name="Triple Mustache 
+  Triple mustaches should interpolate without HTML escaping." executed="True" result="Success" success="True" time="0.0068083" asserts="0" /> <test-case name="Ampersand 
+  Ampersand should interpolate without HTML escaping." executed="True" result="Failure" success="False" time="0.0142186" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: These characters should not be HTML escaped: & " < >
+. But was: These characters should not be HTML escaped: 
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Basic Integer Interpolation 
+  Integers should interpolate seamlessly." executed="True" result="Success" success="True" time="0.0070004" asserts="0" /> <test-case name="Triple Mustache Integer Interpolation 
+  Integers should interpolate seamlessly." executed="True" result="Success" success="True" time="0.0070004" asserts="0" /> <test-case name="Ampersand Integer Interpolation 
+  Integers should interpolate seamlessly." executed="True" result="Failure" success="False" time="0.0150667" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "85 miles an hour!". But was: " miles an hour!""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Basic Decimal Interpolation 
+  Decimals should interpolate seamlessly with proper significance." executed="True" result="Failure" success="False" time="0.0142537" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "1.21 jiggawatts!". But was: "1.210 jiggawatts!""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Triple Mustache Decimal Interpolation 
+  Decimals should interpolate seamlessly with proper significance." executed="True" result="Failure" success="False" time="0.0156634" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "1.21 jiggawatts!". But was: "1.210 jiggawatts!""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Ampersand Decimal Interpolation 
+  Decimals should interpolate seamlessly with proper significance." executed="True" result="Failure" success="False" time="0.0131439" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "1.21 jiggawatts!". But was: " jiggawatts!""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Basic Context Miss Interpolation 
+  Failed context lookups should default to empty strings." executed="True" result="Success" success="True" time="0.0065472" asserts="0" /> <test-case name="Triple Mustache Context Miss Interpolation 
+  Failed context lookups should default to empty strings." executed="True" result="Success" success="True" time="0.0104605" asserts="0" /> <test-case name="Ampersand Context Miss Interpolation 
+  Failed context lookups should default to empty strings." executed="True" result="Success" success="True" time="0.0074288" asserts="0" /> <test-case name="Dotted Names - Basic Interpolation 
+  Dotted names should be considered a form of shorthand for sections." executed="True" result="Failure" success="False" time="0.0159273" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Joe" == "Joe". But was: "" == """</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Triple Mustache Interpolation 
+  Dotted names should be considered a form of shorthand for sections." executed="True" result="Failure" success="False" time="0.0160009" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Joe" == "Joe". But was: "" == """</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Ampersand Interpolation 
+  Dotted names should be considered a form of shorthand for sections." executed="True" result="Failure" success="False" time="0.0185115" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Joe" == "Joe". But was: "" == """</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Arbitrary Depth 
+  Dotted names should be functional to any level of nesting." executed="True" result="Failure" success="False" time="0.0160009" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Phil" == "Phil". But was: "" == "Phil""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Broken Chains 
+  Any falsey value prior to the last part of the name should yield ." executed="True" result="Success" success="True" time="0.0090005" asserts="0" /> <test-case name="Dotted Names - Broken Chain Resolution 
+  Each part of a dotted name should resolve only against its parent." executed="True" result="Success" success="True" time="0.0067854" asserts="0" /> <test-case name="Dotted Names - Initial Resolution 
+  The first part of a dotted name should resolve as any other name." executed="True" result="Failure" success="False" time="0.0124371" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Phil" == "Phil". But was: "" == "Phil""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Context Precedence 
+  Dotted names should be resolved against former resolutions." executed="True" result="Success" success="True" time="0.0071064" asserts="0" /> <test-case name="Interpolation - Surrounding Whitespace 
+  Interpolation should not alter surrounding whitespace." executed="True" result="Success" success="True" time="0.0070004" asserts="0" /> <test-case name="Triple Mustache - Surrounding Whitespace 
+  Interpolation should not alter surrounding whitespace." executed="True" result="Success" success="True" time="0.009943" asserts="0" /> <test-case name="Ampersand - Surrounding Whitespace 
+  Interpolation should not alter surrounding whitespace." executed="True" result="Failure" success="False" time="0.0136242" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: | --- |. But was: |  |"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Interpolation - Standalone 
+  Standalone interpolation should not alter surrounding whitespace." executed="True" result="Success" success="True" time="0.0110006" asserts="0" /> <test-case name="Triple Mustache - Standalone 
+  Standalone interpolation should not alter surrounding whitespace." executed="True" result="Success" success="True" time="0.0090282" asserts="0" /> <test-case name="Ampersand - Standalone 
+  Standalone interpolation should not alter surrounding whitespace." executed="True" result="Failure" success="False" time="0.0200011" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected:   ---
+. But was:   
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Interpolation With Padding 
+  Superfluous in-tag whitespace should be ignored." executed="True" result="Success" success="True" time="0.0072904" asserts="0" /> <test-case name="Triple Mustache With Padding 
+  Superfluous in-tag whitespace should be ignored." executed="True" result="Success" success="True" time="0.0065018" asserts="0" /> <test-case name="Ampersand With Padding 
+  Superfluous in-tag whitespace should be ignored." executed="True" result="Failure" success="False" time="0.0125557" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: |---|. But was: ||"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> 	</results> </test-suite> <test-suite type="Powershell" name="inverted.yml" executed="True" result="Failure" success="False" time="0.2352567" asserts="0"> <results> 		<test-case name="Falsey 
+  Falsey sections should have their contents rendered." executed="True" result="Failure" success="False" time="0.0138991" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "This should be rendered.". But was: """</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Truthy 
+  Truthy sections should have their contents omitted." executed="True" result="Success" success="True" time="0.0065365" asserts="0" /> <test-case name="Context 
+  Objects and hashes should behave like truthy values." executed="True" result="Success" success="True" time="0.0067334" asserts="0" /> <test-case name="List 
+  Lists should behave like truthy values." executed="True" result="Success" success="True" time="0.0120006" asserts="0" /> <test-case name="Empty List 
+  Empty lists should behave like falsey values." executed="True" result="Success" success="True" time="0.0073825" asserts="0" /> <test-case name="Doubled 
+  Multiple inverted sections per template should be permitted." executed="True" result="Failure" success="False" time="0.0133446" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: * first
+* second
+* third
+. But was: 
+* second
+
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Nested (Falsey) 
+  Nested falsey sections should have their contents rendered." executed="True" result="Failure" success="False" time="0.0142851" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: | A B C D E |. But was: | A  E |"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Nested (Truthy) 
+  Nested truthy sections should be omitted." executed="True" result="Success" success="True" time="0.0092214" asserts="0" /> <test-case name="Context Misses 
+  Failed context lookups should be considered falsey." executed="True" result="Success" success="True" time="0.0070403" asserts="0" /> <test-case name="Dotted Names - Truthy 
+  Dotted names should be valid for Inverted Section tags." executed="True" result="Failure" success="False" time="0.0140555" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "" == "". But was: "Not Here" == """</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Falsey 
+  Dotted names should be valid for Inverted Section tags." executed="True" result="Success" success="True" time="0.007231" asserts="0" /> <test-case name="Dotted Names - Broken Chains 
+  Dotted names that cannot be resolved should be considered falsey." executed="True" result="Success" success="True" time="0.0080004" asserts="0" /> <test-case name="Surrounding Whitespace 
+  Inverted sections should not alter surrounding whitespace." executed="True" result="Failure" success="False" time="0.0121472" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected:  | 	|	 | 
+. But was:  |  | 
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Internal Whitespace 
+  Inverted should not alter internal whitespace." executed="True" result="Failure" success="False" time="0.0140008" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected:  |  
+  | 
+. But was:  |  | 
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Indented Inline Sections 
+  Single-line sections should not alter surrounding whitespace." executed="True" result="Failure" success="False" time="0.0160009" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected:  NO
+ WAY
+. But was:  
+ 
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Lines 
+  Standalone lines should be removed from the template." executed="True" result="Failure" success="False" time="0.0142723" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: | This Is
+|
+| A Line
+. But was: | This Is
+
+| A Line
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Indented Lines 
+  Standalone indented lines should be removed from the template." executed="True" result="Failure" success="False" time="0.0156186" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: | This Is
+|
+| A Line
+. But was: | This Is
+  
+| A Line
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Line Endings 
+  "\r\n" should be considered a newline for standalone tags." executed="True" result="Success" success="True" time="0.0062034" asserts="0" /> <test-case name="Standalone Without Previous Line 
+  Standalone tags should not require a newline to precede them." executed="True" result="Failure" success="False" time="0.0155326" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: ^
+/. But was:   
+/"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Without Newline 
+  Standalone tags should not require a newline to follow them." executed="True" result="Failure" success="False" time="0.0146707" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: ^
+/
+. But was: ^"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Padding 
+  Superfluous in-tag whitespace should be ignored." executed="True" result="Success" success="True" time="0.0070798" asserts="0" /> 	</results> </test-suite> <test-suite type="Powershell" name="partials.yml" executed="True" result="Failure" success="False" time="0.1589778" asserts="0"> <results> 		<test-case name="Basic Behavior 
+  The greater-than operator should expand to the named partial." executed="True" result="Failure" success="False" time="0.0145895" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "from partial". But was: """</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Failed Lookup 
+  The empty string should be used when the named partial is not found." executed="True" result="Success" success="True" time="0.0085779" asserts="0" /> <test-case name="Context 
+  The greater-than operator should operate within the current context." executed="True" result="Failure" success="False" time="0.0134957" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "*content*". But was: """</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Recursion 
+  The greater-than operator should properly recurse." executed="True" result="Failure" success="False" time="0.0120006" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: X<Y<>>. But was: "</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Surrounding Whitespace 
+  The greater-than operator should not alter surrounding whitespace." executed="True" result="Failure" success="False" time="0.0156917" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: | 	|	 |. But was: |  |"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Inline Indentation 
+  Whitespace should be left untouched." executed="True" result="Failure" success="False" time="0.0160009" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected:   |  >
+>
+. But was:   |  
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Line Endings 
+  "\r\n" should be considered a newline for standalone tags." executed="True" result="Failure" success="False" time="0.0166604" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: |
+>|. But was: |
+|"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Without Previous Line 
+  Standalone tags should not require a newline to precede them." executed="True" result="Failure" success="False" time="0.0140008" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected:   >
+  >>. But was:   
+>"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Without Newline 
+  Standalone tags should not require a newline to follow them." executed="True" result="Failure" success="False" time="0.0160922" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: >
+  >
+  >. But was: >
+  "</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Indentation 
+  Each line of the partial should be indented before rendering." executed="True" result="Failure" success="False" time="0.0139101" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: \
+ |
+ <
+->
+ |
+/
+. But was: \
+ 
+/
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Padding Whitespace 
+  Superfluous in-tag whitespace should be ignored." executed="True" result="Failure" success="False" time="0.017958" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: |[]|. But was: ||"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> 	</results> </test-suite> <test-suite type="Powershell" name="sections.yml" executed="True" result="Failure" success="False" time="0.3340631" asserts="0"> <results> 		<test-case name="Truthy 
+  Truthy sections should have their contents rendered." executed="True" result="Success" success="True" time="0.0080004" asserts="0" /> <test-case name="Falsey 
+  Falsey sections should have their contents omitted." executed="True" result="Failure" success="False" time="0.0160647" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "". But was: "This should not be rendered.""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Context 
+  Objects and hashes should be pushed onto the context stack." executed="True" result="Failure" success="False" time="0.0122512" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Hi Joe.". But was: "Hi .""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Deeply Nested Contexts 
+  All elements on the context stack should be accessible." executed="True" result="Failure" success="False" time="0.0292786" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: 1
+121
+12321
+1234321
+123454321
+1234321
+12321
+121
+1
+. But was: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="List 
+  Lists should be iterated; list items should visit the context stack." executed="True" result="Failure" success="False" time="0.0242775" asserts="0"> 	<failure> 		<message>Assert failed on "StringToString" with "2" argument(s): "Parameter count mismatch."</message> 		<stack-trace>at line: 13 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Empty List 
+  Empty lists should behave like falsey values." executed="True" result="Success" success="True" time="0.006807" asserts="0" /> <test-case name="Doubled 
+  Multiple sections per template should be permitted." executed="True" result="Failure" success="False" time="0.0171058" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: * first
+* second
+* third
+. But was: 
+* first
+
+* second
+
+* third
+
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Nested (Truthy) 
+  Nested truthy sections should have their contents rendered." executed="True" result="Success" success="True" time="0.0108168" asserts="0" /> <test-case name="Nested (Falsey) 
+  Nested falsey sections should be omitted." executed="True" result="Failure" success="False" time="0.0154157" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: | A  E |. But was: | A B C D E |"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Context Misses 
+  Failed context lookups should be considered falsey." executed="True" result="Success" success="True" time="0.0094" asserts="0" /> <test-case name="Implicit Iterator - String 
+  Implicit iterators should directly interpolate strings." executed="True" result="Failure" success="False" time="0.0156464" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "(a)(b)(c)(d)(e)". But was: "(a b c d e)""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Implicit Iterator - Integer 
+  Implicit iterators should cast integers to strings and interpolate." executed="True" result="Failure" success="False" time="0.0130767" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "(1)(2)(3)(4)(5)". But was: "(1 2 3 4 5)""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Implicit Iterator - Decimal 
+  Implicit iterators should cast decimals to strings and interpolate." executed="True" result="Failure" success="False" time="0.0130514" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "(1.1)(2.2)(3.3)(4.4)(5.5)". But was: "(1.10 2.20 3.30 4.40 5.50)""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Truthy 
+  Dotted names should be valid for Section tags." executed="True" result="Failure" success="False" time="0.0150083" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Here" == "Here". But was: "" == "Here""</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Falsey 
+  Dotted names should be valid for Section tags." executed="True" result="Success" success="True" time="0.0065527" asserts="0" /> <test-case name="Dotted Names - Broken Chains 
+  Dotted names that cannot be resolved should be considered falsey." executed="True" result="Success" success="True" time="0.0070132" asserts="0" /> <test-case name="Surrounding Whitespace 
+  Sections should not alter surrounding whitespace." executed="True" result="Success" success="True" time="0.006716" asserts="0" /> <test-case name="Internal Whitespace 
+  Sections should not alter internal whitespace." executed="True" result="Success" success="True" time="0.0070004" asserts="0" /> <test-case name="Indented Inline Sections 
+  Single-line sections should not alter surrounding whitespace." executed="True" result="Success" success="True" time="0.0060003" asserts="0" /> <test-case name="Standalone Lines 
+  Standalone lines should be removed from the template." executed="True" result="Failure" success="False" time="0.0203087" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: | This Is
+|
+| A Line
+. But was: | This Is
+
+|
+
+| A Line
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Indented Standalone Lines 
+  Indented standalone lines should be removed from the template." executed="True" result="Failure" success="False" time="0.0220831" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: | This Is
+|
+| A Line
+. But was: | This Is
+  
+|
+  
+| A Line
+"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Line Endings 
+  "\r\n" should be considered a newline for standalone tags." executed="True" result="Success" success="True" time="0.0079025" asserts="0" /> <test-case name="Standalone Without Previous Line 
+  Standalone tags should not require a newline to precede them." executed="True" result="Failure" success="False" time="0.0160183" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: #
+/. But was:   
+#
+/"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Standalone Without Newline 
+  Standalone tags should not require a newline to follow them." executed="True" result="Failure" success="False" time="0.0142222" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: #
+/
+. But was: #
+/
+  "</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Padding 
+  Superfluous in-tag whitespace should be ignored." executed="True" result="Failure" success="False" time="0.0140452" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: |=|. But was: ||"</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> 	</results> </test-suite> <test-suite type="Powershell" name="~lambdas.yml" executed="True" result="Failure" success="False" time="0.0114535" asserts="0"> <results> 		<test-case name=" 
+  " executed="True" result="Failure" success="False" time="0.0114535" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: . But was: "</message> 		<stack-trace>at line: 16 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\AllMustacheSpecs.Tests.ps1</stack-trace> 	</failure> </test-case> 	</results> </test-suite> <test-suite type="Powershell" name="Interpolation" executed="True" result="Failure" success="False" time="0.3330156" asserts="0"> <results> 		<test-case name="No Interpolation 
+  Mustache-free templates should render as-is." executed="True" result="Success" success="True" time="0.0120006" asserts="0" /> <test-case name="Basic Interpolation 
+  Unadorned tags should interpolate content into the template." executed="True" result="Success" success="True" time="0.0062547" asserts="0" /> <test-case name="HTML Escaping 
+  Basic interpolation should be HTML escaped." executed="True" result="Success" success="True" time="0.0063777" asserts="0" /> <test-case name="Triple Mustache 
+  Triple mustaches should interpolate without HTML escaping." executed="True" result="Success" success="True" time="0.0088654" asserts="0" /> <test-case name="Ampersand 
+  Ampersand should interpolate without HTML escaping." executed="True" result="Failure" success="False" time="0.0160493" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: These characters should not be HTML escaped: & " < >
+. But was: These characters should not be HTML escaped: 
+"</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Basic Integer Interpolation 
+  Integers should interpolate seamlessly." executed="True" result="Success" success="True" time="0.0067466" asserts="0" /> <test-case name="Triple Mustache Integer Interpolation 
+  Integers should interpolate seamlessly." executed="True" result="Success" success="True" time="0.0070004" asserts="0" /> <test-case name="Ampersand Integer Interpolation 
+  Integers should interpolate seamlessly." executed="True" result="Failure" success="False" time="0.0135091" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "85 miles an hour!". But was: " miles an hour!""</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Basic Decimal Interpolation 
+  Decimals should interpolate seamlessly with proper significance." executed="True" result="Failure" success="False" time="0.0127201" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "1.21 jiggawatts!". But was: "1.210 jiggawatts!""</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Triple Mustache Decimal Interpolation 
+  Decimals should interpolate seamlessly with proper significance." executed="True" result="Failure" success="False" time="0.0127342" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "1.21 jiggawatts!". But was: "1.210 jiggawatts!""</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Ampersand Decimal Interpolation 
+  Decimals should interpolate seamlessly with proper significance." executed="True" result="Failure" success="False" time="0.0134122" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "1.21 jiggawatts!". But was: " jiggawatts!""</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Basic Context Miss Interpolation 
+  Failed context lookups should default to empty strings." executed="True" result="Success" success="True" time="0.0079098" asserts="0" /> <test-case name="Triple Mustache Context Miss Interpolation 
+  Failed context lookups should default to empty strings." executed="True" result="Success" success="True" time="0.00839" asserts="0" /> <test-case name="Ampersand Context Miss Interpolation 
+  Failed context lookups should default to empty strings." executed="True" result="Success" success="True" time="0.0065029" asserts="0" /> <test-case name="Dotted Names - Basic Interpolation 
+  Dotted names should be considered a form of shorthand for sections." executed="True" result="Failure" success="False" time="0.0141037" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Joe" == "Joe". But was: "" == """</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Triple Mustache Interpolation 
+  Dotted names should be considered a form of shorthand for sections." executed="True" result="Failure" success="False" time="0.0149825" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Joe" == "Joe". But was: "" == """</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Ampersand Interpolation 
+  Dotted names should be considered a form of shorthand for sections." executed="True" result="Failure" success="False" time="0.0173391" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Joe" == "Joe". But was: "" == """</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Arbitrary Depth 
+  Dotted names should be functional to any level of nesting." executed="True" result="Failure" success="False" time="0.0115612" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Phil" == "Phil". But was: "" == "Phil""</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Broken Chains 
+  Any falsey value prior to the last part of the name should yield ." executed="True" result="Success" success="True" time="0.011181" asserts="0" /> <test-case name="Dotted Names - Broken Chain Resolution 
+  Each part of a dotted name should resolve only against its parent." executed="True" result="Success" success="True" time="0.0090225" asserts="0" /> <test-case name="Dotted Names - Initial Resolution 
+  The first part of a dotted name should resolve as any other name." executed="True" result="Failure" success="False" time="0.0190411" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: "Phil" == "Phil". But was: "" == "Phil""</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Dotted Names - Context Precedence 
+  Dotted names should be resolved against former resolutions." executed="True" result="Success" success="True" time="0.0090005" asserts="0" /> <test-case name="Interpolation - Surrounding Whitespace 
+  Interpolation should not alter surrounding whitespace." executed="True" result="Success" success="True" time="0.0060928" asserts="0" /> <test-case name="Triple Mustache - Surrounding Whitespace 
+  Interpolation should not alter surrounding whitespace." executed="True" result="Success" success="True" time="0.0090005" asserts="0" /> <test-case name="Ampersand - Surrounding Whitespace 
+  Interpolation should not alter surrounding whitespace." executed="True" result="Failure" success="False" time="0.0138595" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: | --- |. But was: |  |"</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Interpolation - Standalone 
+  Standalone interpolation should not alter surrounding whitespace." executed="True" result="Success" success="True" time="0.0090005" asserts="0" /> <test-case name="Triple Mustache - Standalone 
+  Standalone interpolation should not alter surrounding whitespace." executed="True" result="Success" success="True" time="0.0081341" asserts="0" /> <test-case name="Ampersand - Standalone 
+  Standalone interpolation should not alter surrounding whitespace." executed="True" result="Failure" success="False" time="0.0131514" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected:   ---
+. But was:   
+"</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> <test-case name="Interpolation With Padding 
+  Superfluous in-tag whitespace should be ignored." executed="True" result="Success" success="True" time="0.006677" asserts="0" /> <test-case name="Triple Mustache With Padding 
+  Superfluous in-tag whitespace should be ignored." executed="True" result="Success" success="True" time="0.0088196" asserts="0" /> <test-case name="Ampersand With Padding 
+  Superfluous in-tag whitespace should be ignored." executed="True" result="Failure" success="False" time="0.0135756" asserts="0"> 	<failure> 		<message>Assert failed on "be" with "1" argument(s): "Expected: |---|. But was: ||"</message> 		<stack-trace>at line: 18 in  C:\Users\Narendra Tumkur\Documents\GitHub\Pustache\specs\Interpolation.Tests.ps1</stack-trace> 	</failure> </test-case> 	</results> </test-suite>
+</test-results>
